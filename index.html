@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>
+            <img src="https://img.icons8.com/ios-filled/30/null/todo-list.png" alt="icon">
+            <span>My To-Do List</span>
+        </h1>
+
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+        <input type="datetime-local" id="taskDate" />
+
+        <select id="category">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Other">Other</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Study">Study</option>
+        </select>
+        <button onclick="addTask()" id="addBtn">Add Task</button>
+
+        <div class="filter">
+            <input type="date" id="filterDate" />
+            <label for="filterDate">Filter by date:</label>
+        </div>
+
+        <h2>Task List:</h2>
+        <ul id="taskList"></ul>
+
+        <div class="buttons">
+            <button onclick="clearTasks()" class="clear">🗑️ Clear All Tasks</button>
+            <button onclick="toggleDarkMode()" class="dark-toggle">🌗 Toggle Dark Mode</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
